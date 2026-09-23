@@ -44,14 +44,14 @@
 }
 
 % Name and contact information
-\def\name{Your Name}
-\def\position{Ph.D. Candidate}
-\def\affiliation{Your affiliation}
-\def\address{Address of affiliation}
-\def\phone{Your phone number}
-\def\email{\href{mailto:youremail@example.com}{youremail@example.com}}
-\def\website{\href{https://yourwebsite.com}{yourwebsite.com}}
-\def\LinkedIn{\href{https://www.linkedin.com/in/yourname}{LinkedIn}}
+\def\name{Yoshitaka Inoue}
+\def\position{Ph.D. Candidate in Computer Science \,$\cdot$\, NIH Predoctoral Fellow}
+\def\affiliation{University of Minnesota, Twin Cities \,$\cdot$\, National Institutes of Health}
+\def\address{Bethesda, Maryland}
+\def\email{\href{mailto:inoue.yoshitaka.iv1@gmail.com}{inoue.yoshitaka.iv1@gmail.com}}
+\def\website{\href{https://inoue0426.github.io/}{inoue0426.github.io}}
+\def\scholar{\href{https://scholar.google.co.jp/citations?user=aBizyLkAAAAJ\&hl=en}{Google Scholar}}
+\def\github{\href{https://github.com/inoue0426}{GitHub}}
 
 \begin{document}
 
@@ -62,27 +62,24 @@
     {\large \position}\\
     \affiliation\\
     \address\\
-    \phone \, $\cdot$ \, \email\\
-    \website \, $\cdot$ \, \LinkedIn
+    \email \, $\cdot$ \, \website\\
+    \scholar \, $\cdot$ \, \github
 \end{center}
-
-\noindent\textit{This CV is just an example of some ways you can present your experience and expertise. You can adapt it by adding or removing sections or changing the order of sections. You may also need to modify it to fit with the favoured style in your country. Don't forget to remove any of the italicised tips!}
 
 % Section: Education
 \section*{Education}
 \hrule
 \vspace{1em}
 \begin{itemize}[leftmargin=*]
-    \item[] \textbf{Ph.D. in XXX}, University, Country \hfill Month 20XX -- Present\\
-    Thesis: \textit{Title}\\
-    Thesis supervisors: Drs. Name \& Name
+    \item[] \textbf{Ph.D. Candidate in Computer Science and Engineering}, University of Minnesota, Twin Cities, USA \hfill 2021 -- Present\\
+    Advisor: Prof. Rui Kuang; Co-advisor: Dr. Augustin Luna (NIH)\\
+    Expected graduation: September 2027
     
-    \item[] \textbf{M.S. in XXX}, University, Country \hfill Month 20XX -- Month 20XX\\
-    Thesis: \textit{Title}\\
-    Thesis supervisor: Dr. Name
+    \item[] \textbf{M.Eng. in Information Science}, Nara Institute of Science and Technology, Japan \hfill 2017 -- 2019\\
+    Advisor: Prof. Shigehiko Kanaya
     
-    \item[] \textbf{B.S. in XXX}, University, Country \hfill Month 20XX -- Month 20XX\\
-    Minor: Title of minor
+    \item[] \textbf{B.Sc. in Biological Science}, Kumamoto University, Japan \hfill 2012 -- 2017\\
+    Advisor: Prof. Susumu Takio
 \end{itemize}
 
 % Section: Research Interests
@@ -90,9 +87,10 @@
 \hrule
 \vspace{1em}
 \begin{itemize}[leftmargin=2em]
-    \item Research interest 1
-    \item Research interest 2
-    \item Research interest 3
+    \item Machine learning for biological perturbations and therapeutic response
+    \item Single-cell and functional genomics
+    \item Intervention-aware representation learning
+    \item Graph-based biomedical reasoning and LLM-based scientific reasoning
 \end{itemize}
 
 % Section: Research Experience
@@ -100,14 +98,26 @@
 \hrule
 \vspace{1em}
 \begin{itemize}[leftmargin=*]
-    \item[] \textbf{Research role}, University or other research organisation \hfill Month 20XX -- Month 20XX\\
-    Supervisor/Manager: Dr. Name
+    \item[] \textbf{Pre-doctoral Fellow}, National Library of Medicine / National Cancer Institute, NIH \hfill 2024 -- Present\\
+    Co-advisor: Dr. Augustin Luna
     \begin{itemize}
-        \item Put a description of your main duties or accomplishments here
-        \item Put a description of your main duties or accomplishments here
-        \item Put a description of your main duties or accomplishments here
+        \item Developing machine learning methods for biological perturbation modeling and therapeutic response prediction.
+        \item Working across single-cell, pharmacogenomic, high-throughput screening, cancer cell-line, and patient datasets.
+        \item Developing treatment-conditioned latent-state transition models, graph-based drug-response models, and biomedical reasoning systems.
+    \end{itemize}
+
+    \item[] \textbf{Google Summer of Code Contributor; Mentor}, Google Summer of Code \hfill 2022 -- 2024
+    \begin{itemize}
+        \item Developed a drug-response prediction pipeline and mentored projects involving PyTorch Geometric datasets and multi-tool LLM aggregation.
+    \end{itemize}
+
+    \item[] \textbf{Machine Learning Engineer}, FreakOut, Inc., Tokyo, Japan \hfill 2019 -- 2021
+    \begin{itemize}
+        \item Applied machine learning to click-through-rate prediction.
     \end{itemize}
 \end{itemize}
+
+\end{document}
 
 % Section: Teaching Experience
 \section*{Teaching Experience}

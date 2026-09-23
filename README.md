@@ -1,147 +1,112 @@
-# 📄 ecr-academic-cv  
-**Academic LaTeX CV template for emerging and early-career researchers**
+# Yoshitaka Inoue — Academic CV
 
-This repository contains a customizable LaTeX CV template designed for emerging and early-career researchers (ECRs). It includes structured academic sections and optional open science badges (e.g., Open Data, Open Materials, Open Code, Preregistered).
+[![Build and Deploy LaTeX CV](https://github.com/inoue0426/cv_postdoc/actions/workflows/latex.yml/badge.svg)](https://github.com/inoue0426/cv_postdoc/actions/workflows/latex.yml)
 
-The template is designed to be:
-- Clean and professional  
-- Easy to customize  
-- Open science friendly  
-- Suitable for academic job and grant applications  
+**Academic CV of Yoshitaka Inoue**, maintained in LaTeX and automatically compiled with GitHub Actions.
 
----
+📄 **Latest CV:** [Yoshitaka_Inoue_CV.pdf](https://inoue0426.github.io/cv_postdoc/Yoshitaka_Inoue_CV.pdf)
 
-# 🚀 Getting Started
-
-You can use this template in two main ways:
-
-## Option 1 — Use with Overleaf (Recommended)
-
-1. Download the repository as a `.zip` file.
-2. Go to https://www.overleaf.com
-3. Create a new project → “Upload Project”
-4. Upload the entire folder (including the `badges/` folder)
-5. Open `main.tex`
-6. Click “Recompile”
-
-That’s it.
+🌐 **CV landing page:** [inoue0426.github.io/cv_postdoc](https://inoue0426.github.io/cv_postdoc/)
 
 ---
 
-## Option 2 — Compile Locally
+## Overview
 
-You need a LaTeX distribution installed:
+This repository contains the LaTeX source for my academic CV, including research experience, publications, education, awards, service, and other academic activities.
 
-- **TeX Live** (Linux)  
-- **MiKTeX** (Windows)  
-- **MacTeX** (Mac)  
+The CV is designed for academic and postdoctoral applications and is continuously maintained as the source of record for the public PDF.
 
-Then run:
+## Automated PDF Build
+
+GitHub Actions automatically compiles `ecr-cv.tex` and publishes the resulting PDF.
+
+### On every push to `main`
+
+1. `ecr-cv.tex` is compiled with LaTeX.
+2. The generated PDF is renamed to `Yoshitaka_Inoue_CV.pdf`.
+3. The PDF is uploaded as a GitHub Actions artifact.
+4. The latest version is deployed to GitHub Pages.
+
+Pull requests run the compilation step as a build check without deploying to Pages.
+
+The workflow can also be triggered manually from the **Actions** tab.
+
+## Repository Structure
+
+```text
+.
+├── ecr-cv.tex
+├── badges/
+│   ├── opencode.png
+│   ├── opendata.png
+│   ├── openmaterial.png
+│   ├── preregistered.png
+│   └── preregisteredplus.png
+├── .github/
+│   └── workflows/
+│       └── latex.yml
+└── README.md
+```
+
+- `ecr-cv.tex` — main LaTeX source
+- `badges/` — optional open-science badge assets
+- `.github/workflows/latex.yml` — automated build and GitHub Pages deployment
+
+## Compile Locally
+
+A standard LaTeX distribution such as **TeX Live**, **MacTeX**, or **MiKTeX** is sufficient.
 
 ```bash
-pdflatex main.tex
-```
-Or compile using your LaTeX editor of choice.
-
-📁 Repository Structure
-
-It is important to keep the folder structure intact:
-main.tex
-```
-badges/
-    opendata.png
-    openmaterial.png
-    opencode.png
-    preregistered.png
-    preregisteredplus.png
+pdflatex ecr-cv.tex
 ```
 
-⚠️ The badges/ folder must stay in the same directory as main.tex.
-If you delete it or move it, the document will not compile if badge images are used.
+For a more robust build that automatically handles repeated compilation passes:
 
-# 🏅 Open Science Badges
+```bash
+latexmk -pdf ecr-cv.tex
+```
 
-This template allows you to display open science badges next to publications.
+The output will be:
 
-Available badges:
+```text
+ecr-cv.pdf
+```
 
+## Editing the CV
+
+Personal and professional information is defined near the top of `ecr-cv.tex`, including:
+
+```tex
+\def\name{Yoshitaka Inoue}
+\def\position{...}
+\def\affiliation{...}
+\def\address{...}
+\def\email{...}
+\def\website{...}
+```
+
+Sections can be edited directly in the LaTeX source. After changes are pushed to `main`, the public PDF is rebuilt automatically.
+
+## Open Science Badges
+
+The `badges/` directory contains optional assets for annotating publications with open-science indicators:
+
+- Open Code
 - Open Data
 - Open Materials
-- Open Code
 - Preregistered
 - Preregistered+
 
-## How Badges Work
+These assets are retained as part of the original CV template design and can be used where appropriate.
 
-Each publication can optionally display badges using a two-column layout:
+## Source Template
 
-Left column → badges
-Right column → publication text
+This CV is based on the **FORRT LaTeX Curriculum Vitae Template** by Emily Friedel, with subsequent customization for my academic CV.
 
-If you do not want to use badges:
+Template information and attribution are retained in the LaTeX source.
 
-- Remove the badge legend section
-- Replace the publication layout with a simple \item[] format
+---
 
-## ✏️ Customizing the Template
-
-You can easily:
-
-- Change fonts (see preamble)
-
-- Add or remove sections
-
-- Reorder publications
-
-- Remove badge functionality
-
-- Adjust spacing (\vspace)
-
-- Modify margins in the geometry package
-
-Your personal information is defined at the top of main.tex:
-```
-\newcommand{\name}{Your Name}
-\newcommand{\position}{Your Position}
-\newcommand{\affiliation}{Your Institution}
-\newcommand{\address}{City, Country}
-\newcommand{\phone}{Your Phone}
-\newcommand{\email}{your@email.com}
-```
-
-## 🛠 Troubleshooting
-❌ “File badges/opendata.png not found”
-
-Make sure:
-
-- The badges/ folder is uploaded
-
-- It is in the same directory as main.tex
-
-- File names have not been changed
-
-❌ Compilation error related to images
-
-Try:
-
-- Re-uploading the full repository
-
-- Checking that image file names are unchanged
-
-- Recompiling twice
-
-## 💡 Suggested Use
-
-This template is especially useful for:
-
-- Academic job applications
-
-- Postdoc applications
-
-- Grant submissions
-
-- Open science oriented contexts (e.g., SIPS, meta-science, reproducibility communities)
-
-# 🤝 Contributing
-
-Contributions are welcome!
+**Yoshitaka Inoue**  
+University of Minnesota, Twin Cities · National Institutes of Health  
+[Website](https://inoue0426.github.io/) · [Google Scholar](https://scholar.google.co.jp/citations?user=aBizyLkAAAAJ&hl=en) · [GitHub](https://github.com/inoue0426) · [LinkedIn](https://www.linkedin.com/in/inoue0426/)

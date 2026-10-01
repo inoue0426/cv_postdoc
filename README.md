@@ -1,12 +1,12 @@
-# Yoshitaka Inoue — Academic CV and Bibliography
+# Yoshitaka Inoue — Academic CV, Publications, and Presentations
 
 [![Build and Deploy LaTeX CV](https://github.com/inoue0426/cv_postdoc/actions/workflows/latex.yml/badge.svg)](https://github.com/inoue0426/cv_postdoc/actions/workflows/latex.yml)
 
-**Academic CV and complete bibliography of Yoshitaka Inoue**, maintained in LaTeX and automatically compiled with GitHub Actions.
+**Academic CV plus a complete publications and presentations record for Yoshitaka Inoue**, maintained in LaTeX and automatically compiled with GitHub Actions.
 
 📄 **Latest CV:** [Yoshitaka_Inoue_CV.pdf](https://inoue0426.github.io/cv_postdoc/Yoshitaka_Inoue_CV.pdf)
 
-📚 **Complete Bibliography:** [Yoshitaka_Inoue_Bibliography.pdf](https://inoue0426.github.io/cv_postdoc/Yoshitaka_Inoue_Bibliography.pdf)
+📚 **Publications & Presentations:** [Yoshitaka_Inoue_Bibliography.pdf](https://inoue0426.github.io/cv_postdoc/Yoshitaka_Inoue_Bibliography.pdf)
 
 🌐 **CV landing page:** [inoue0426.github.io/cv_postdoc](https://inoue0426.github.io/cv_postdoc/)
 
@@ -17,9 +17,9 @@
 This repository contains two separate LaTeX documents:
 
 - `ecr-cv.tex` — academic CV for postdoctoral and academic applications, with a selected publication list.
-- `bibliography.tex` — complete publication record, maintained independently from the CV.
+- `bibliography.tex` — complete publication record plus known oral, poster, and workshop presentations, maintained independently from the CV.
 
-The bibliography is based on the publication list in [Google Scholar](https://scholar.google.com/citations?user=aBizyLkAAAAJ&hl=en). It includes journal articles, preprints/workshop papers, and conference abstracts, including separate Scholar records for abstracts that later became journal publications.
+The publication list is based on [Google Scholar](https://scholar.google.com/citations?user=aBizyLkAAAAJ&hl=en). The same document also tracks known conference activity, including peer-reviewed workshop papers, conference abstracts, oral presentations, posters, and workshop presentations.
 
 ## Automated PDF Build
 

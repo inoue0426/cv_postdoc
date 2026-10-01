@@ -1,4 +1,4 @@
-name: Build and Deploy LaTeX CV
+name: Build and Deploy LaTeX CV and Bibliography
 
 on:
   push:
@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - "ecr-cv.tex"
+      - "bibliography.tex"
       - "badges/**"
       - ".github/workflows/latex.yml"
   pull_request:
     paths:
       - "ecr-cv.tex"
+      - "bibliography.tex"
       - "badges/**"
       - ".github/workflows/latex.yml"
   workflow_dispatch:
@@ -26,22 +28,28 @@ concurrency:
 
 jobs:
   build:
-    name: Compile ecr-cv.tex
+    name: Compile CV and bibliography
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
 
-      - name: Compile LaTeX
+      - name: Compile CV
         uses: xu-cheng/latex-action@v4
         with:
           root_file: ecr-cv.tex
 
-      - name: Prepare published CV
+      - name: Compile bibliography
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: bibliography.tex
+
+      - name: Prepare published PDFs
         run: |
           mkdir -p _site
           cp ecr-cv.pdf _site/Yoshitaka_Inoue_CV.pdf
+          cp bibliography.pdf _site/Yoshitaka_Inoue_Bibliography.pdf
           cat > _site/index.html <<'EOF'
           <!doctype html>
           <html lang="en">
@@ -53,15 +61,18 @@ jobs:
           </head>
           <body>
             <p><a href="Yoshitaka_Inoue_CV.pdf">Open Yoshitaka Inoue's CV (PDF)</a></p>
+            <p><a href="Yoshitaka_Inoue_Bibliography.pdf">Open Yoshitaka Inoue's complete bibliography (PDF)</a></p>
           </body>
           </html>
           EOF
 
-      - name: Upload compiled PDF
+      - name: Upload compiled PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
-          path: _site/Yoshitaka_Inoue_CV.pdf
+          name: academic-pdfs
+          path: |
+            _site/Yoshitaka_Inoue_CV.pdf
+            _site/Yoshitaka_Inoue_Bibliography.pdf
           if-no-files-found: error
 
       - name: Configure GitHub Pages

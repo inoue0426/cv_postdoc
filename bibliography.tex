@@ -2,38 +2,17 @@
 % Source of record: Google Scholar profile aBizyLkAAAAJ
 % This file is intentionally separate from the selected publications in ecr-cv.tex.
 
-\documentclass{article}
-
-\usepackage{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[sc]{mathpazo}
-\usepackage{enumitem}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{hyperref}
-\usepackage{setspace}
-
-\geometry{
-  body={7in, 9.2in},
-  left=0.7in,
-  top=0.65in
-}
-
-\setstretch{1.08}
-
-\hypersetup{
-  colorlinks=true,
-  linkcolor=Blue,
-  urlcolor=Blue,
-  citecolor=Blue
-}
+\documentclass[11pt]{article}
+\newcommand{\documentlabel}{Bibliography}
+\input{cv-style.tex}
 
 \def\name{Yoshitaka Inoue}
 \def\scholar{\href{https://scholar.google.com/citations?user=aBizyLkAAAAJ\&hl=en}{Google Scholar}}
 \def\website{\href{https://inoue0426.github.io/}{inoue0426.github.io}}
 
 \newcommand{\publication}[3]{%
-  \item[] #1\\
-  \textit{#2}. #3
+  \entryspace\item #1\\
+  #2. #3
 }
 
 \begin{document}
@@ -41,19 +20,19 @@
 \begin{center}
   {\huge \textbf{\name}}\\
   \vspace{0.2em}
-  {\Large Publications and Presentations}\\
+  {\Large Bibliography}\\
   \vspace{0.3em}
   \scholar \,$\cdot$\, \website
 \end{center}
 
 \noindent
-\textit{Complete publication record and known conference presentations, maintained separately from the selected-publications section of the academic CV. Publication entries are cross-checked against the author's Google Scholar profile; presentation entries are maintained from conference and CV records.}
+Publications and presentations. Journal articles, peer-reviewed conference papers,
+preprints, and presentation records are listed separately.\\[3pt]
+{\small\textsuperscript{*} Equal contribution.}
 
-\section*{Peer-Reviewed Journal Articles}
-\hrule
-\vspace{0.8em}
+\cvsection{Peer-reviewed Journal Articles}
 
-\begin{itemize}[leftmargin=*]
+\begin{enumerate}[label={J\arabic*.}]
 
   \publication
   {\textbf{Inoue, Y.}, Lee, H., Fu, T., Kuang, R., \& Luna, A. (2026).}
@@ -80,18 +59,57 @@
   {Machine learning approach in predicting GlutoPeak test parameters from image data with AutoML and transfer learning}
   {\textit{Heliyon}, 9(10).}
 
-\end{itemize}
+\end{enumerate}
 
-\section*{Preprints}
-\hrule
-\vspace{0.8em}
+\cvsection{Peer-reviewed Conference Papers}
 
-\begin{itemize}[leftmargin=*]
+\begin{enumerate}[label={C\arabic*.}]
 
   \publication
-  {\textbf{Inoue, Y.}, Jeong, M., Hero, A., Kuang, R., \& Luna, A. (2026).}
+  {\textbf{Inoue, Y.}, Fu, T., \& Luna, A. (2026).}
+  {GraphPINE: Graph Importance Propagation for Interpretable Drug Response Prediction}
+  {\textit{Network Science \& Artificial Intelligence for Biomedicine \& Health Informatics (Net-AI-BHI)}, IEEE BIBM 2026. Accepted.}
+
+  \publication
+  {\textbf{Inoue, Y.}, Sun, S., Zhu, Q., \& Luna, A. (2026).}
+  {Integrating High-Throughput Screening and Biological Annotations for Machine-Learning-Based Therapeutic Candidate Prioritization in Glioblastoma}
+  {\textit{6th Biomedical Informatics Applications in Translational Research and Rare Diseases}, IEEE BIBM 2026. Accepted.}
+
+  \publication
+  {\textbf{Inoue, Y.}\textsuperscript{*}, Jeong, M.\textsuperscript{*}, Hero, A., Kuang, R., \& Luna, A. (2026).}
+  {PerturbRx: Learning Treatment-Conditioned Latent Transitions from Single-Cell Perturbations for Patient Drug Response}
+  {\textit{NeurIPS Workshop on World Models for High-Stakes Health}. Accepted; poster presentation.}
+
+  \publication
+  {\textbf{Inoue, Y.}, Song, T., Wang, X., Luna, A., \& Fu, T. (2026).}
+  {DrugAgent: Reliable Multi-Agent Aggregation under Conflicting Biomedical Evidence}
+  {\textit{ICML 2026 3rd Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences}.}
+
+  \publication
+  {\textbf{Inoue, Y.}, Fu, T., \& Luna, A. (2025).}
+  {GraphPINE: Graph Importance Propagation for Interpretable Drug Response Prediction}
+  {\textit{ICLR 2025 Workshop on Machine Learning for Genomics Explorations}.}
+
+  \publication
+  {\textbf{Inoue, Y.}, Song, T., Wang, X., Luna, A., \& Fu, T. (2025).}
+  {DrugAgent: Explainable Drug Repurposing Agent with Large Language Model-based Reasoning}
+  {\textit{ICLR 2025 Workshop on Machine Learning for Genomics Explorations}.}
+
+\end{enumerate}
+
+\cvsection{Preprints and Manuscripts Under Review}
+
+\begin{enumerate}[label={P\arabic*.}]
+
+  \publication
+  {\textbf{Inoue, Y.}\textsuperscript{*}, Jeong, M.\textsuperscript{*}, Hero, A., Kuang, R., \& Luna, A. (2026).}
   {PerturbRx: Learning Treatment-Conditioned Latent Transitions from Single-Cell Perturbations for Patient Drug Response}
   {\textit{arXiv preprint arXiv:2608.21349}.}
+
+  \publication
+  {\textbf{Inoue, Y.}, Song, T., Wang, X., Kuang, R., Fu, T., \& Luna, A. (2026).}
+  {DrugAgent: Reliable Multi-Agent Integration of Conflicting Biomedical Evidence for Drug--Target Interaction Assessment}
+  {\textit{Scientific Reports}. Minor revision. \href{https://github.com/inoue0426/DrugAgent}{Code}.}
 
   \publication
   {Taniyama, D., \textbf{Inoue, Y.}, Elloumi, F., Kim, Y. S., Roper, N., Seibert, C., Kelly, M., Lobanov, A., Aladjem, M. I., Luna, A., \& Pommier, Y. (2026).}
@@ -113,51 +131,11 @@
   {BiGCN: Leveraging Cell and Gene Similarities for Single-cell Transcriptome Imputation with Bi-Graph Convolutional Networks}
   {\textit{bioRxiv}, 2024.04.05.588342.}
 
-\end{itemize}
+\end{enumerate}
 
-\section*{Peer-Reviewed Workshop Papers}
-\hrule
-\vspace{0.8em}
+\cvsection{Conference Abstracts}
 
-\begin{itemize}[leftmargin=*]
-
-  \publication
-  {\textbf{Inoue, Y.}, Fu, T., \& Luna, A. (2026).}
-  {GraphPINE: Graph Importance Propagation for Interpretable Drug Response Prediction}
-  {\textit{Network Science \& Artificial Intelligence for Biomedicine \& Health Informatics (Net-AI-BHI)}, IEEE BIBM 2026. Accepted.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Sun, S., Zhu, Q., \& Luna, A. (2026).}
-  {Integrating High-Throughput Screening and Biological Annotations for Machine-Learning-Based Therapeutic Candidate Prioritization in Glioblastoma}
-  {\textit{6th Biomedical Informatics Applications in Translational Research and Rare Diseases}, IEEE BIBM 2026. Accepted.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Jeong, M., Hero, A., Kuang, R., \& Luna, A. (2026).}
-  {PerturbRx: Learning Treatment-Conditioned Latent Transitions from Single-Cell Perturbations for Patient Drug Response}
-  {\textit{NeurIPS Workshop on World Models for High-Stakes Health}. Accepted; poster presentation.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Song, T., Wang, X., Luna, A., \& Fu, T. (2026).}
-  {DrugAgent: Reliable Multi-Agent Aggregation under Conflicting Biomedical Evidence}
-  {\textit{ICML 2026 3rd Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences}.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Fu, T., \& Luna, A. (2025).}
-  {GraphPINE: Graph Importance Propagation for Interpretable Drug Response Prediction}
-  {\textit{ICLR 2025 Workshop on Machine Learning for Genomics Explorations}.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Song, T., Wang, X., Luna, A., \& Fu, T. (2025).}
-  {DrugAgent: Explainable Drug Repurposing Agent with Large Language Model-based Reasoning}
-  {\textit{ICLR 2025 Workshop on Machine Learning for Genomics Explorations}.}
-
-\end{itemize}
-
-\section*{Conference Abstracts}
-\hrule
-\vspace{0.8em}
-
-\begin{itemize}[leftmargin=*]
+\begin{enumerate}[label={A\arabic*.}]
 
   \publication
   {Elloumi, F., Reinhold, W. C., Varma, S., Wang, Y., Kinali, M., Arakawa, Y., \textbf{Inoue, Y.}, et al. (2026).}
@@ -169,14 +147,12 @@
   {TRPM4 expression predicts Acetalax sensitivity in prostate cancer}
   {\textit{Cancer Research}, 86(7\_Supplement), 7717--7717.}
 
-\end{itemize}
+\end{enumerate}
 
 
-\section*{Oral Presentations}
-\hrule
-\vspace{0.8em}
+\cvsection{Oral Presentations}
 
-\begin{itemize}[leftmargin=*]
+\begin{enumerate}[label={O\arabic*.}]
 
   \publication
   {\textbf{Inoue, Y.} (2026).}
@@ -208,13 +184,11 @@
   {drGT: Attention-Guided Gene Assessment for Drug-Response Modeling}
   {\textit{NIH Artificial Intelligence Symposium}, Rockville, MD. Oral presentation; selected among 5 of 78 listed abstracts.}
 
-\end{itemize}
+\end{enumerate}
 
-\section*{Poster and Workshop Presentations}
-\hrule
-\vspace{0.8em}
+\cvsection{Poster and Workshop Presentations}
 
-\begin{itemize}[leftmargin=*]
+\begin{enumerate}[label={W\arabic*.}]
 
   \publication
   {\textbf{Inoue, Y.} (2026).}
@@ -222,17 +196,7 @@
   {\textit{New England Computational Biology Symposium (NECB)}, Boston, MA. Poster presentation.}
 
   \publication
-  {\textbf{Inoue, Y.} (2025).}
-  {drGT}
-  {\textit{ISMB 2025}. Poster presentation.}
-
-  \publication
-  {\textbf{Inoue, Y.} (2024).}
-  {drGT}
-  {\textit{ISMB 2024}. Poster presentation.}
-
-  \publication
-  {\textbf{Inoue, Y.}, Jeong, M., Hero, A., Kuang, R., \& Luna, A. (2026).}
+  {\textbf{Inoue, Y.}\textsuperscript{*}, Jeong, M.\textsuperscript{*}, Hero, A., Kuang, R., \& Luna, A. (2026).}
   {PerturbRx: Learning Treatment-Conditioned Latent Transitions from Single-Cell Perturbations for Patient Drug Response}
   {\textit{NeurIPS Workshop on World Models for High-Stakes Health}. Poster presentation.}
 
@@ -240,6 +204,11 @@
   {\textbf{Inoue, Y.}, Song, T., Wang, X., Luna, A., \& Fu, T. (2026).}
   {DrugAgent: Reliable Multi-Agent Aggregation under Conflicting Biomedical Evidence}
   {\textit{ICML 2026 3rd Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences}. Workshop presentation.}
+
+  \publication
+  {\textbf{Inoue, Y.} (2025).}
+  {drGT}
+  {\textit{ISMB 2025}. Poster presentation.}
 
   \publication
   {\textbf{Inoue, Y.}, Fu, T., \& Luna, A. (2025).}
@@ -251,9 +220,14 @@
   {DrugAgent: Explainable Drug Repurposing Agent with Large Language Model-based Reasoning}
   {\textit{ICLR 2025 Workshop on Machine Learning for Genomics Explorations}. Workshop presentation.}
 
-\end{itemize}
+  \publication
+  {\textbf{Inoue, Y.} (2024).}
+  {drGT}
+  {\textit{ISMB 2024}. Poster presentation.}
 
-\vfill
+\end{enumerate}
+
+\vspace{1em}
 \begin{center}
   \begin{footnotesize}
     Last updated: \today

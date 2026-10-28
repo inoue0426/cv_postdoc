@@ -18,8 +18,11 @@ This repository contains two separate LaTeX documents:
 
 - `ecr-cv.tex` — academic CV for postdoctoral and academic applications, with a selected publication list.
 - `bibliography.tex` — complete publication record plus known oral, poster, and workshop presentations, maintained independently from the CV.
+- `cv-style.tex` — shared typography, section headings, entry spacing, and page footers for both PDFs.
 
-The publication list is based on [Google Scholar](https://scholar.google.com/citations?user=aBizyLkAAAAJ&hl=en). The same document also tracks known conference activity, including peer-reviewed workshop papers, conference abstracts, oral presentations, posters, and workshop presentations.
+The publication list is based on [Google Scholar](https://scholar.google.com/citations?user=aBizyLkAAAAJ&hl=en) and the manuscript records maintained in the CV. The bibliography groups journal articles, peer-reviewed conference papers (including workshop papers), preprints and manuscripts under review, conference abstracts, oral presentations, and poster/workshop presentations. Each paper retains its specific venue and acceptance status.
+
+Entries use section-specific identifiers (`J`, `C`, `P`, `A`, `O`, and `W`) for easy reference within each document. The CV contains selected journal articles, so numbering is local to each PDF. Equal contributions are marked with an asterisk. Presentation records remain separate from paper records because the same work can have both a paper and one or more presentations.
 
 ## Automated PDF Build
 
@@ -42,6 +45,7 @@ The workflow can also be triggered manually from the **Actions** tab.
 .
 ├── ecr-cv.tex
 ├── bibliography.tex
+├── cv-style.tex
 ├── badges/
 │   ├── opencode.png
 │   ├── opendata.png
@@ -56,6 +60,7 @@ The workflow can also be triggered manually from the **Actions** tab.
 
 - `ecr-cv.tex` — main academic CV source
 - `bibliography.tex` — complete bibliography source
+- `cv-style.tex` — shared document layout and pagination
 - `badges/` — optional open-science badge assets
 - `.github/workflows/latex.yml` — automated build and GitHub Pages deployment
 

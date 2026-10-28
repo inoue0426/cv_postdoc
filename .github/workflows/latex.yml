@@ -7,12 +7,14 @@ on:
     paths:
       - "ecr-cv.tex"
       - "bibliography.tex"
+      - "cv-style.tex"
       - "badges/**"
       - ".github/workflows/latex.yml"
   pull_request:
     paths:
       - "ecr-cv.tex"
       - "bibliography.tex"
+      - "cv-style.tex"
       - "badges/**"
       - ".github/workflows/latex.yml"
   workflow_dispatch:

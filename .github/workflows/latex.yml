@@ -37,15 +37,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
-      - name: Compile CV
+      - name: Compile CV and bibliography
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: ecr-cv.tex
-
-      - name: Compile bibliography
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: bibliography.tex
+          root_file: |
+            ecr-cv.tex
+            bibliography.tex
 
       - name: Prepare published PDFs
         run: |

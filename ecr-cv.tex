@@ -69,12 +69,18 @@
     \begin{itemize}
         \item Develop machine learning methods for perturbation modeling and therapeutic response prediction across single-cell, pharmacogenomic, high-throughput screening, cell-line, and patient datasets.
         \item Build treatment-conditioned latent-state transition models for transferring perturbation-response information to patient drug-response prediction.
+        \item Develop and evaluate models using the large-scale Tahoe-100M single-cell perturbation atlas, with distributed multi-GPU training workflows.
         \item Develop graph-based drug-response models and biomedical reasoning systems that integrate molecular, pharmacologic, and clinical evidence.
     \end{itemize}
 
-    \cventry{Google Summer of Code Contributor; Mentor}{Google Summer of Code}{2022--2024}
+    \cventry{Google Summer of Code Mentor}{Google Summer of Code}{2023--2024}
     \begin{itemize}
-        \item Built a drug-response prediction pipeline and mentored projects on PyTorch Geometric datasets and multi-tool LLM aggregation for biomedical analysis.
+        \item Mentored and coordinated open-source projects on PyTorch Geometric datasets and multi-tool LLM aggregation for biomedical analysis, including project planning, technical guidance, and progress reviews.
+    \end{itemize}
+
+    \cventry{Google Summer of Code Contributor}{Google Summer of Code}{2022}
+    \begin{itemize}
+        \item Developed an open-source drug-response prediction pipeline.
     \end{itemize}
 
     \cventry{Machine Learning Engineer}{FreakOut, Inc., Tokyo, Japan}{2019--2021}
@@ -257,10 +263,10 @@
     Single-cell and bulk RNA-seq; pharmacogenomics and drug-response modeling; perturbation and functional genomics; cancer genomics; biological network analysis; multi-omics integration; biomedical knowledge graphs.
 
     \item[] \textbf{Frameworks:}
-    PyTorch; PyTorch Geometric; scikit-learn; LangChain; AutoGen.
+    PyTorch; PyTorch Geometric; Hugging Face Transformers and Accelerate; scikit-learn; LangChain; AutoGen.
 
     \item[] \textbf{Computational Infrastructure:}
-    Slurm; HPC; PyTorch multi-GPU training (up to 8 NVIDIA H200 GPUs); parallel GPU experimentation at 50+ GPU scale; CUDA; Docker.
+    Slurm; HPC; distributed PyTorch training (Distributed Data Parallel, DDP; up to 8 NVIDIA H200 GPUs); Hugging Face Accelerate; parallel GPU experimentation at 50+ GPU scale; CUDA; Docker.
 \end{itemize}
 
 \end{document}
